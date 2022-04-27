@@ -1,0 +1,416 @@
+.banner
+{
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 1000px;
+}
+.banner video
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+.banner .content1
+{
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+.banner .content1 h1
+{
+	margin: 0;
+	padding: 0;
+	font-size: 4.5em;
+	text-transform: uppercase;
+	color: #fff;
+}
+.banner .content1 p
+{
+	font-size: 1.5em;
+	color: #fff;
+}
+
+.mapbox
+{
+    width: 1000px;
+    height: 550px;
+    background-position: 50%;
+    background-size: 100%;
+    position: relative;
+}
+.mapbox h1
+{
+	margin-left: 900px;
+}
+.list
+{
+	margin-top: 200px;
+	display: flex;
+	justify-content: center;
+}
+nav
+{
+   position: relative;
+   display: flex;
+}
+nav a
+{
+	position: relative;
+	margin: 0 20px;
+	font-size: 2em;
+	color: #000;
+}
+nav #marker
+{
+	position: absolute;
+	left: 0;
+	height: 4px;
+	width: 0;
+	background: #000;
+	bottom: -8px;
+	transition: 0.5s;
+	border-radius: 4px;
+}
+
+.about
+{
+    background: url(ff.jpg) no-repeat left;
+    background-size: 55%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 100px 0;
+}
+.inner-section
+{
+    width: 40%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 100px;
+    box-shadow: 10px 10px 8px rgba(0,0,0,0.3);
+}
+.inner-section h1
+{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+.text
+{
+    font-size: 13px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+.container
+{
+	margin: 30px;
+}
+
+.row{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.image1{
+	background: #50A7FF;
+	position: relative;
+	flex: 1;
+	max-width: 460px;
+	height: 300px;
+	margin: 20px;
+	overflow: hidden;
+}
+
+.image1 img{
+	opacity: 0.8;
+	position: relative;
+	vertical-align: top;
+	transition: 0.6s;
+	transition-property: opacity;
+}
+
+.image1:hover img{
+	opacity: 1;
+}
+
+.image1 .details{
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+.image1 .details h2{
+	text-align: center;
+	font-size: 35px;
+	text-transform: uppercase;
+	font-weight: 300;
+	margin-top: 70px;
+	transition: 0.4s;
+	transition-property: transform;
+}
+
+.image1 .details h2 span{
+	font-weight: 900;
+}
+
+.image:hover .details h2{
+	transform: translateY(-30px);
+}
+
+.image1 .details p{
+	margin: 30px 30px 0 30px;
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
+	opacity: 0;
+	transition: 0.6s;
+	transition-property: opacity, transform;
+}
+
+.image1:hover .details p{
+	opacity: 1;
+	transform: translateY(-40px);
+}
+
+.more{
+	position: absolute;
+	background: rgba(255, 255, 255, 0.8);
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+	bottom: -60px;
+	transition: 0.6s;
+	transition-property: bottom;
+}
+
+.image1:hover .more{
+	bottom: 0;
+}
+
+.more .read-more{
+	color: #000;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.more .read-more span{
+	font-weight: 900;
+}
+
+.more .icon-links i{
+	color: #000;
+	font-size: 20px;
+}
+
+.more .icon-links a:not(:last-child) i{
+	margin-right: 20px;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 1080px){
+	.image1{
+		flex: 100%;
+		max-width: 480px;
+	}
+}
+
+@media (max-width: 400px){
+	.image1 .details p{
+		font-size: 16px;
+	}
+
+	.more .read-more, .more .icon-links a i{
+		font-size: 18px;
+	}
+}
+      
+}
+.slider
+{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1D212B;
+  transform: translate(300px,0);
+}
+
+.img-slider{
+  position: relative;
+  width: 800px;
+  height: 500px;
+  margin: 10px;
+  background: #1D212B;
+  transform: translate(500px,0);
+}
+
+.img-slider .slide{
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.img-slider .slide.active{
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+  transition-property: clip-path;
+}
+
+.img-slider .slide img{
+  z-index: 1;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.img-slider .slide .info{
+  position: absolute;
+  top: 0;
+  padding: 15px 30px;
+}
+
+.img-slider .slide .info h2{
+  color: #fff;
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.img-slider .slide .info p{
+  color: #fff;
+  background: rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  width: 60%;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.img-slider .navigation{
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.img-slider .navigation .btn{
+  background: rgba(255, 255, 255, 0.5);
+  width: 12px;
+  height: 12px;
+  margin: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.img-slider .navigation .btn.active{
+  background: #2696E9;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 820px){
+  .img-slider{
+    width: 600px;
+    height: 375px;
+  }
+
+  .img-slider .slide .info{
+    padding: 10px 25px;
+  }
+
+  .img-slider .slide .info h2{
+    font-size: 35px;
+  }
+
+  .img-slider .slide .info p{
+    width: 70%;
+    font-size: 15px;
+  }
+
+  .img-slider .navigation{
+    bottom: 25px;
+  }
+
+  .img-slider .navigation .btn{
+    width: 10px;
+    height: 10px;
+    margin: 8px;
+  }
+}
+
+@media (max-width: 620px){
+  .img-slider{
+    width: 400px;
+    height: 250px;
+  }
+
+  .img-slider .slide .info{
+    padding: 10px 20px;
+  }
+
+  .img-slider .slide .info h2{
+    font-size: 30px;
+  }
+
+  .img-slider .slide .info p{
+    width: 80%;
+    font-size: 13px;
+  }
+
+  .img-slider .navigation{
+    bottom: 15px;
+  }
+
+  .img-slider .navigation .btn{
+    width: 8px;
+    height: 8px;
+    margin: 6px;
+  }
+}
+
+@media (max-width: 420px){
+  .img-slider{
+    width: 320px;
+    height: 200px;
+  }
+
+  .img-slider .slide .info{
+    padding: 5px 10px;
+  }
+
+  .img-slider .slide .info h2{
+    font-size: 25px;
+  }
+
+  .img-slider .slide .info p{
+    width: 90%;
+    font-size: 11px;
+  }
+
+  .img-slider .navigation{
+    bottom: 10px;
+  }
+}
